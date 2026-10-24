@@ -232,7 +232,7 @@ int dcam_k_cfg_aem(struct isp_io_param *param, struct dcam_dev_param *p)
 		struct dcam_dev_aem_win cur;
 		struct dcam_path_desc *path = &dev->path[DCAM_PATH_AEM];
 
-		ret = copy_from_user(&cur, param->property_param, size);
+		ret = copy_from_user(&cur, param->property_param, sizeof(cur));
 		if (ret) {
 			pr_err("fail to copy from user ret=0x%x\n", (unsigned int)ret);
 			return -EPERM;
