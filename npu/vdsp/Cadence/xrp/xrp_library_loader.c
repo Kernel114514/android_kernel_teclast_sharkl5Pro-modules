@@ -35,7 +35,7 @@ static int32_t libinfo_list_size(const struct libinfo_list *list)
 		return LIST_ERROR;
 	return list->number;
 }
-static void* libinfo_alloc_element()
+static void* libinfo_alloc_element(void)
 {
 	struct loadlib_info *pnew = NULL;
 

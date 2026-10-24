@@ -85,6 +85,7 @@ $(KO_MODULE_NAME)-y := $(patsubst $(src)/%.c,%.o,$(KO_MODULE_SRC))
 #
 ccflags-y += -DDEBUG
 ccflags-y += -DKERNEL_VERSION_414
+ccflags-y += -Wno-error -Wno-format-extra-args
 ccflags-y += -I$(KO_MODULE_PATH)/../interface
 ccflags-y += -I$(srctree)/drivers/staging/android/ion
 ccflags-y += -I$(srctree)/drivers/devfreq/apsys/

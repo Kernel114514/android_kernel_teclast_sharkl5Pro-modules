@@ -166,7 +166,7 @@ static struct nvm_name_table *cf_table_match(struct nvm_cali_cmd *cmd)
 	struct nvm_name_table *pTable = NULL;
 	int len = sizeof(g_config_table) / sizeof(struct nvm_name_table);
 
-	if ((NULL == cmd) || (NULL == cmd->itm))
+	if (!cmd)
 		return NULL;
 	for (i = 0; i < len; i++) {
 		if (NULL == g_config_table[i].itm)
